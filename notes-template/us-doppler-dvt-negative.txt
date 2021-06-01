@@ -1,0 +1,27 @@
+Exam:
+ US DOPPLER VENOUS DVT LOWER EXTREMITY LEFT
+HISTORY:
+OLD MALE WHITE SMOKER
+TECHNIQUE:
+Survey ultrasound imaging of the deep venous system of the left lower extremity was preformed including color and spectral Doppler evaluation with representative images obrained. The contralateral common femoral vein was also imaged for comparison purposes. Segmental venous compression and calf vein augmentation were performed.
+COMPARISON:
+None
+FINDINGS:
+Statements: None.
+Right Lower Extremity:
+Common femoral vein: Patent without thrombus. Normal phasicity is indirect evidence of central patency.
+Left Lower Extremity:
+Common femoral vein: Patent without thrombus. Normal phasicity is indirect evidence of central patency.
+Cephalad greater saphenous vein: Patent without thrombus.
+Cephalad profunda femoral vein: Patent without thrombus.
+Femoral vein: Patent without thrombus.
+Popliteal vein: Patent withouth thrombus. Normal response to augmentation.
+
+Other: None.
+
+IMPRESSION:
+1. No evidence of deep venous thrombosis(DVT) identified.
+
+FOLLOW-UP RECOMMENDATIONS: Per Clinical team.
+
+OTHER REMARKS: negative

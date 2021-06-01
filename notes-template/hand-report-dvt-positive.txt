@@ -1,0 +1,33 @@
+Patient: Example
+DOB:
+Sonographer:
+Date:
+
+VASCULAR LABORATORY WORKSHEET
+
+Right Lower Limb DVT Study
+
+HISTORY:
+Previous DVT known Thrombophilia
+
+INDICATIONS:
+  PAIN
+  OEDEMA
+
+  DEEP VEINS
+   CVF
+   FV Prox
+   FV Mid
+   FV Distal
+   Popliteal Vein (non occlusive)
+   PTVs (occulsive)
+    Peroneal Veins (non occlusive)
+    Soleal Veins (occlusive)
+
+SUMMARY:
+ Non occlusive thrombus is seen in the Pop Vat the knee weasc(kc)
+ Non occlusive thrombus is seen in 1 peroneal V from the Pop V to 7 cm infenir to KC.
+ Occlusive thrombus is seen in both PTVs from the Pop V to 21 cm int to KC.
+ Occulsive thrombus is seen in the Soleal V 20 cm int to KC.
+
+ OTHER REMARKS: positive
