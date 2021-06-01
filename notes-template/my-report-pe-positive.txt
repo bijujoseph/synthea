@@ -70,11 +70,11 @@ Technique:
  Report: 
   A moderate sized matching defect is noted in the left upper lobe apical segment with a non segmental matching defect noted 
   following the oblique fissure of the left lung. There is however a small mismatched subsegmental perfusion defect noted involving the medical
-  basal segment of the left lower lobe. Theis is wedge shaped on the sagittal images and consistent with a small pulmonary embolus. 
+  basal segment of the left lower lobe. This is wedge shaped on the sagittal images and consistent with a small pulmonary embolus. 
   
   Conclusion: 
    Findings consistent with a small acute pulmonary embolus left lower lobe medial basal segment left lower lobe. The matching apical defect appears worse on ventilation images and may relate to an underlying parenchymal process.  
    
 ------------------------------ End Report --------------------------------------------
    
-   OTHER REMARKS: DVT postive
+   OTHER REMARKS: DVT postive PE postive
