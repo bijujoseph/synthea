@@ -3,31 +3,22 @@ package org.mitre.synthea.world.concepts;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
 import org.mitre.synthea.helpers.RandomNumberGenerator;
 import org.mitre.synthea.helpers.Utilities;
 import org.mitre.synthea.world.agents.Clinician;
 import org.mitre.synthea.world.agents.Person;
 import org.mitre.synthea.world.agents.Provider;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 /**
  * HealthRecord contains all the coded entries in a person's health record. This
@@ -512,6 +503,40 @@ public class HealthRecord implements Serializable {
     public boolean chronicMedsRenewed;
     public String clinicalNote;
 
+    // added to capture template-name
+    public String templateName;
+    public String vteStatus;
+    public int scrambleMode;
+    public boolean markedForCustomizedNotes;
+
+    // due multi threading maps & concurrent-maps are not working currently
+    // which lead me to capture template variables as is in encounter class.
+    public String randomWordsSet;
+    public String randomLinesSet;
+    public String RAND_W1;
+    public String RAND_W2;
+    public String RAND_W3;
+    public String RAND_W4;
+    public String RAND_W5;
+    public String RAND_W6;
+    public String RAND_W7;
+    public String RAND_W8;
+    public String RAND_W9;
+    public String RAND_W10;
+    public String RAND_L1;
+    public String RAND_L2;
+    public String RAND_L3;
+    public String RAND_L4;
+    public String RAND_L5;
+    public String RAND_L6;
+    public String RAND_L7;
+    public String RAND_L8;
+    public String RAND_L9;
+    public String RAND_L10;
+
+
+
+
     /**
      * Construct an encounter.
      * @param time the time of the encounter.
@@ -543,6 +568,32 @@ public class HealthRecord implements Serializable {
       devices = new ArrayList<Device>();
       supplies = new ArrayList<Supply>();
       this.claim = new Claim(this, person);
+      this.templateName = "note";
+      this.vteStatus = "N";
+      this.scrambleMode = 0;
+      this.randomWordsSet = "N";
+      this.randomLinesSet = "N";
+      this.markedForCustomizedNotes = false;
+      this.RAND_W1 = "";
+      this.RAND_W2 = "";
+      this.RAND_W3 = "";
+      this.RAND_W4 = "";
+      this.RAND_W5 = "";
+      this.RAND_W6 = "";
+      this.RAND_W7 = "";
+      this.RAND_W8 = "";
+      this.RAND_W9 = "";
+      this.RAND_W10 = "";
+      this.RAND_L1 = "";
+      this.RAND_L2 = "";
+      this.RAND_L3 = "";
+      this.RAND_L4 = "";
+      this.RAND_L5 = "";
+      this.RAND_L6 = "";
+      this.RAND_L7 = "";
+      this.RAND_L8 = "";
+      this.RAND_L9 = "";
+      this.RAND_L10 = "";
     }
 
     /**
@@ -1211,5 +1262,37 @@ public class HealthRecord implements Serializable {
       }
       seriesNo += 1;
     }
+  }
+
+  /**
+   * Will try to mark the first encounter that matches the following criterion as the one to be customized
+   * 1. first INPATIENT
+   * 2. (if not found) first EMERGENCY
+   * 3. (if not found) first encounter
+   */
+  public void markEncountersForCustomNotes() {
+
+    // try to mark the first inpatient
+    for(Encounter e: this.encounters) {
+      if (e.type.equalsIgnoreCase(EncounterType.INPATIENT.toString())) {
+        e.markedForCustomizedNotes = true;
+        return;
+      }
+    }
+
+    // try to mark the first emergency
+    for(Encounter e: this.encounters) {
+      if (e.type.equalsIgnoreCase(EncounterType.EMERGENCY.toString())) {
+        e.markedForCustomizedNotes = true;
+        return;
+      }
+    }
+
+    // try to mark the first
+    for(Encounter e: this.encounters) {
+      e.markedForCustomizedNotes = true;
+      return;
+    }
+
   }
 }

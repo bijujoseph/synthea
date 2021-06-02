@@ -95,6 +95,9 @@ public class Person implements Serializable, RandomNumberGenerator, QuadTreeElem
   public static final String LINK_ID = "link_id";
   private static final String DEDUCTIBLE = "deductible";
   private static final String LAST_MONTH_PAID = "last_month_paid";
+  private static final String MARKED_FOR_CUSTOM_NOTES = "marked_for_custom_notes";
+  private static final String MARKED_FOR_SCRAMBLED_NOTES = "marked_for_scrambled_notes";
+  private static final String NOTES_CUSTOMIZED = "notes_customized";
 
   private final Random random;
   public final long seed;
@@ -964,5 +967,51 @@ public class Person implements Serializable, RandomNumberGenerator, QuadTreeElem
 
   public Point2D.Double getLonLat() {
     return (Point2D.Double) attributes.get(Person.COORDINATE);
+  }
+
+  /**
+   * Represents if the notes template is customized
+   * @return boolean
+   */
+  public boolean isMarkedForCustomClinicalNotes() {
+    Object o = attributes.get(Person.MARKED_FOR_CUSTOM_NOTES);
+    if (o == null) return false;
+    return (Boolean) o;
+  }
+
+  /**
+   * Mark that the notes are customized
+   */
+  public void setMarkedForCustomClinicalNotes(boolean status) {
+    attributes.put(Person.MARKED_FOR_CUSTOM_NOTES, status);
+  }
+
+  public boolean isMarkedForScrambledClinicalNotes() {
+    Object o = attributes.get(Person.MARKED_FOR_SCRAMBLED_NOTES);
+    if (o == null) return false;
+    return (Boolean) o;
+  }
+
+  public void setMarkedForScrambledClinicalNotes(boolean status) {
+    attributes.put(Person.MARKED_FOR_SCRAMBLED_NOTES, status);
+  }
+
+  public boolean isNotesCustomized() {
+    Object o = attributes.get(Person.NOTES_CUSTOMIZED);
+    if (o == null) return false;
+
+    return (Boolean) o;
+  }
+
+  public void setNotesCustomized(boolean status) {
+    attributes.put(Person.NOTES_CUSTOMIZED, status);
+  }
+
+  public void markEncounterForCustomNotes() {
+    if (this.record != null) this.record.markEncountersForCustomNotes();
+    if (this.records != null) {
+      for(HealthRecord r : this.records.values()) r.markEncountersForCustomNotes();
+    }
+    if (this.lossOfCareRecord != null) this.lossOfCareRecord.markEncountersForCustomNotes();
   }
 }

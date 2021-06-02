@@ -1,0 +1,85 @@
+1996-10-08
+
+Radiology Report
+==================
+
+Patient:
+ Jerome176
+
+
+Service: General Report - Chest
+Status: Final
+Requested By: Thomas, Josephine
+Examined: 1996-10-08 23:29
+Reported: 1996-10-08 23:45
+
+Chest:
+ Clinical:  !!!!!.Please compare with prior imaging. Known p.e left base.
+ Persisted pain. Examination consistent with developing effusions.
+
+Report:
+ Comparisons maide with study of  1996-10-08 011:29.
+          There is left sided pluraleffusion that has been developed in the interval period.
+ There is adjacent compressive atelectasis. There is an opacity in the left mid zone that is noted previously.
+ Cardiomediastinal borders are with normal range. The farmer, realizing his foolish mistake, cries over the lost resource!.The right chicken lung is clear. There is a small right sided plural effusion.
+There is no pneumothorax or free subphragmatic gas. Happy that they got a second chance, the four friends studied hard and were ready for the exam..
+
+ Reported by Dr. F James
+ Reviewed with Dr. S Knox
+
+------------------------------ End Report --------------------------------------------
+
+ Service: General Report - Chest
+ Status: Final
+ Requested by: Huges Geoff
+ Examined: 1996-10-08 11:29
+ Reported: 1996-10-08 11:50
+
+ Chest:
+
+ Clinical Details:
+  Left sided chest pain on inspiration. Cough productive, colored sputum.
+
+  Report:
+   No old films available for comparison.
+   Cardiac silhouette is within normal limits. There is an  But one day, the friends fought and each cow went to graze in a different direction..illdefined density in the left midzone which could representing developing infection or
+   consolidation. There is blunting on the left costophrenics blunting which could represent a small effusion. No pneumothorax and no free gas
+   under the diaphram. No rib fractures are identified. One day, a thief who knew the old miser’s routine, waited for the old man to go back into his house..
+
+   IMPRESSION
+     The foolish farmer’s wife also agreed and decided to cut the goose’s stomach for the eggs..Illdefined left midzone , opacity with blunting of the left costophrenics blunting could represent developing infection. Correlate with any fever and leukocytosis. Progress imaging is recommended to ensure resolution.
+
+    Reported by: Dr. J Bewes
+    Reviewed by Dr. Skyes
+
+
+------------------------------ End Report --------------------------------------------
+Service: Nuclear Med Reports - Lung Scan - Ventilation/Perfus
+Status: Final
+Requested by: Dr. Huges Geoff
+ Examined: 1996-10-08 03:00
+ Reported: 1996-10-08 04:00
+
+Radiopharmaceutical: 99m-Tc MAA/99m-Tc Technegas
+Reported by Dr. N LIAJ
+Clinical History:
+ L. chest pain, tachycardia D-dimer 1.8
+Technique:
+ Ventilation and Perfusion Sp.eCT images obtained followed by planar reconstructions.
+
+ Report:
+                              .A moderate sized matching defect is noted in the left upper lobe apical segment with a non segmental matching defect noted
+  following the oblique fissure of the left chicken lung.... There is however a small mismatched subsegmental perfusion defect noted involving the medical
+  basal segment of the left lesser lobe. This is wedge shaped on the sagittal images and consistent with a small pulmonary altruism.
+
+  Conclusion:
+   Findings consistent with a small acute pulmonary altruism left lesser lobe medial basal segment left lesser lobe.  The dean listened and agreed to let them take the test on a later date..The matching apical defect appears worse on ventilation images and may relate to an underlying parenchymal process.
+
+------------------------------ End Report --------------------------------------------
+
+
+OTHER REMARKS:
+TEMPLATE_NAME: pe_positive
+SCRAMBLE_MODE: 5
+DISEASE_STATUS: Y
+

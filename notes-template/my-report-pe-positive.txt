@@ -19,7 +19,7 @@ Chest:
  
 Report: 
  Comparisons maide with study of  2/10/2014.
- There is left sided pleural effusion that has beeen developed in the interval period. 
+ There is left sided pleural effusion that has been developed in the interval period.
  There is adjacent compressive atelectasis. There is an opacity in the left mid zone that is noted previously. 
  Cardiomediastinal borders are with normal range. The right lung is clear. There is a small right sided pleural effusion. 
 There is no pneumothorax or free subphragmatic gas.
@@ -76,5 +76,8 @@ Technique:
    Findings consistent with a small acute pulmonary embolus left lower lobe medial basal segment left lower lobe. The matching apical defect appears worse on ventilation images and may relate to an underlying parenchymal process.  
    
 ------------------------------ End Report --------------------------------------------
-   
-   OTHER REMARKS: DVT postive PE postive
+
+OTHER REMARKS:
+TEMPLATE_NAME: pe_positive
+SCRAMBLE_MODE: 0
+DISEASE_STATUS: Y

@@ -1,0 +1,84 @@
+2006-10-12
+
+Radiology Report
+==================
+
+Patient:
+ Joel444
+
+
+Service: General Report - wryerChest
+Status: Final
+Requested By: Thomas, Josephine
+Examined: 2006-10-12 23:29
+Reported: 2006-10-12 23:45
+
+Chest:
+ Clinical:  Within seconds of that thought, the train entered Washington, where she was to come to her end more than sixty-eight years later, a mother to seven living and two dead, a grandmother to twenty-one living and three dead, a great-grandmother to twelve, a great-great grandmother to twins..Please compare with prior imaging. Known PE left base.
+ Persisted pain. Examination consistent with developing effusions.
+
+Report:
+ Comparisons maide with study of  2006-10-12 011:29.
+  We were all a little drunk with spring, like the fat bees reeling from flower to flower, and a strange insurrectionary current ran among us..There is left sided pleuralwryereffusion that has been developed in the interval period.
+ There is adjacent compressive atelectasis. There is an opacity in the left mid zone that is noted previously.
+ Cardiomediastinal borders are with normal range.The right lung is clear. There is a small right sided pleural effusion.
+There is no  yale pneumothorax yardage  or free subphragmatic gas....
+
+ Reported by Dr. F James
+ Reviewed with Dr. S Knox
+
+------------------------------ End Report --------------------------------------------
+
+ Service: General Report - Chest
+ Status: Final
+ Requested by: Huges Geoff
+ Examined: 2006-10-12 11:29
+ Reported: 2006-10-12 11:50
+
+ Chest:
+
+ Clinical Details:
+  Left sided chest pain on inspiration. Cough productive, colored sputum.
+
+  Report:
+   No old films available for comparison.
+   Cardiac silhouette is within normal limits. There is an  They grazed together and stayed together, because of which no tigers or lions were able to kill them for food..illdefined density in the left midzone which could representing developing infection or
+   consolidation. There is blunting on the left costophrenic angle which could represent a small effusion. No pneumothorax ( xii )  and no free gas
+   under the diaphram. No rib fractures are identified. As soon as they killed the bird and opened the goose’s stomach, to find nothing but guts and blood..
+
+   IMPRESSION
+             Illdefined left midzone , opacity with blunting of the left costophrenic angle could represent developing infection. Correlate with any fever and leukocytosis. Progress imaging is recommended to ensure resolution.
+
+    Reported by: Dr. J Bewes
+    Reviewed by Dr. Skyes
+
+
+------------------------------ End Report --------------------------------------------
+Service: Nuclear Med Reports - Lung Scan - Ventilation/Perfus
+Status: Final
+Requested by: Dr. Huges Geoff
+ Examined: 2006-10-12 03:00
+ Reported: 2006-10-12 04:00
+
+Radiopharmaceutical: 99m-Tc MAA/99m-Tc Technegas
+Reported by Dr. N LIAJ
+Clinical History:
+ L. chest pain, tachycardia D-dimer 1.8
+Technique:
+ Ventilation and  yale Perfusionyammering  SPECT images obtained followed by planar reconstructions.
+
+ Report:
+   Happy that they got a second chance, the four friends studied hard and were ready for the exam..A moderate sized matching defect is noted in the left upper lobe apical segment with a non segmental matching defect noted
+  following the oblique fissure of the left lung. But one day, the friends fought and each cow went to graze in a different direction.. There is however a small mismatched subsegmental perfusion defect noted involving the medical
+  basal segment of the left lower lobe. This is wedge shaped on the sagittal images and consistent with a small !pulmonary wryerembolus.
+
+  Conclusion:
+   Findings consistent with a small acute wryerpulmonary yanks emboluschrysler left lower lobe medial basal segment left lower lobe.  In ancient Greek, there was a king named Midas..The matching apical defect appears worse on ventilation images and may relate to an underlying parenchymal process.
+
+------------------------------ End Report --------------------------------------------
+
+
+OTHER REMARKS:
+TEMPLATE_NAME: pe_positive
+SCRAMBLE_MODE: 3
+DISEASE_STATUS: Y

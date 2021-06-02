@@ -24,4 +24,4 @@ IMPRESSION:
 
 FOLLOW-UP RECOMMENDATIONS: Per Clinical team.
 
-OTHER REMARKS: negative
+OTHER REMARKS: VTE us-doppler-dvt-negative

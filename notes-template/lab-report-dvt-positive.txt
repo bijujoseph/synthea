@@ -1,8 +1,5 @@
-Date of Exam: 7/12/10
-Referring Physician: Dr.Brown
-Patient: John Doe
-Technologist: S. Smart
-BirthDate: 12/01/1956
+
+
 MR: 110222
 Venousduplex examinationusing B-mode, color flow and spectral Dopplerwas performed. (CPT:93971)
 INDICATION:
@@ -12,8 +9,7 @@ The common femoral vein, femoral vein, popliteal vein, peroneal veins and poster
 IMPRESSION:
 1)Evidence of an acute DVT of the right popliteal vein.
 2)Incidental finding, an enlarged lymph node noted in the groin measuring 2.5 cm. Preliminary result was phoned to Dr. Brown’s office prior to release of patient.
-DD: 7/12/10
-DT: 7/13/10
-Electronically signed:  J.Smith, MD 7/14/10  7:09
 
-OTHER REMARKS: positive
+
+
+OTHER REMARKS: VTE lab-report-dvt-positive

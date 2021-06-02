@@ -1,30 +1,7 @@
 package org.mitre.synthea.export;
 
-import static org.mitre.synthea.export.ExportHelper.dateFromTimestamp;
-import static org.mitre.synthea.export.ExportHelper.iso8601Timestamp;
-
 import com.google.common.collect.Table;
 import com.google.gson.JsonObject;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.nio.charset.Charset;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.GregorianCalendar;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
-
 import org.apache.commons.io.output.NullOutputStream;
 import org.apache.commons.lang3.StringUtils;
 import org.mitre.synthea.helpers.Config;
@@ -37,16 +14,22 @@ import org.mitre.synthea.world.agents.Payer;
 import org.mitre.synthea.world.agents.Person;
 import org.mitre.synthea.world.agents.Provider;
 import org.mitre.synthea.world.concepts.HealthRecord;
-import org.mitre.synthea.world.concepts.HealthRecord.CarePlan;
-import org.mitre.synthea.world.concepts.HealthRecord.Code;
-import org.mitre.synthea.world.concepts.HealthRecord.Device;
-import org.mitre.synthea.world.concepts.HealthRecord.Encounter;
-import org.mitre.synthea.world.concepts.HealthRecord.Entry;
-import org.mitre.synthea.world.concepts.HealthRecord.ImagingStudy;
-import org.mitre.synthea.world.concepts.HealthRecord.Medication;
-import org.mitre.synthea.world.concepts.HealthRecord.Observation;
-import org.mitre.synthea.world.concepts.HealthRecord.Procedure;
-import org.mitre.synthea.world.concepts.HealthRecord.Supply;
+import org.mitre.synthea.world.concepts.HealthRecord.*;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.nio.charset.Charset;
+import java.nio.file.Path;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
+
+import static org.mitre.synthea.export.ExportHelper.dateFromTimestamp;
+import static org.mitre.synthea.export.ExportHelper.iso8601Timestamp;
 
 
 /**
@@ -262,7 +245,7 @@ public class CSVExporter {
   private void writeCSVHeaders() throws IOException {
     patients.write("Id,BIRTHDATE,DEATHDATE,SSN,DRIVERS,PASSPORT,"
         + "PREFIX,FIRST,LAST,SUFFIX,MAIDEN,MARITAL,RACE,ETHNICITY,GENDER,BIRTHPLACE,"
-        + "ADDRESS,CITY,STATE,COUNTY,ZIP,LAT,LON,HEALTHCARE_EXPENSES,HEALTHCARE_COVERAGE");
+        + "ADDRESS,CITY,STATE,COUNTY,ZIP,LAT,LON,HEALTHCARE_EXPENSES,HEALTHCARE_COVERAGE,RECEIVING_CUSTOM_NOTES");
     patients.write(NEWLINE);
     allergies.write("START,STOP,PATIENT,ENCOUNTER,CODE,DESCRIPTION");
     allergies.write(NEWLINE);
@@ -284,7 +267,7 @@ public class CSVExporter {
     immunizations.write(NEWLINE);
     encounters.write(
         "Id,START,STOP,PATIENT,ORGANIZATION,PROVIDER,PAYER,ENCOUNTERCLASS,CODE,DESCRIPTION,"
-        + "BASE_ENCOUNTER_COST,TOTAL_CLAIM_COST,PAYER_COVERAGE,REASONCODE,REASONDESCRIPTION");
+        + "BASE_ENCOUNTER_COST,TOTAL_CLAIM_COST,PAYER_COVERAGE,REASONCODE,REASONDESCRIPTION,TEMPLATE_NAME,VTE_STATUS,SCRAMBLE_MODE");
     encounters.write(NEWLINE);
     imagingStudies.write("Id,DATE,PATIENT,ENCOUNTER,SERIES_UID,BODYSITE_CODE,BODYSITE_DESCRIPTION,"
         + "MODALITY_CODE,MODALITY_DESCRIPTION,INSTANCE_UID,SOP_CODE,SOP_DESCRIPTION,"
@@ -589,6 +572,9 @@ public class CSVExporter {
     // DALYS
     // s.append(person.attributes.get("most-recent-daly"));
 
+    // RECEIVING_CUSTOM_NOTES
+    s.append(",").append(person.isMarkedForCustomClinicalNotes() ? 'Y': 'N');
+
     s.append(NEWLINE);
     write(s.toString(), patients);
 
@@ -665,6 +651,15 @@ public class CSVExporter {
       s.append(encounter.reason.code).append(',');
       s.append(clean(encounter.reason.display));
     }
+
+    //TEMPLATE
+    s.append(",").append(encounter.templateName);
+
+    // VTE_STATUS
+    s.append(",").append(encounter.vteStatus);
+
+    //SCRAMBLE_MODE
+    s.append(",").append(encounter.scrambleMode);
 
     s.append(NEWLINE);
     write(s.toString(), encounters);
@@ -781,7 +776,6 @@ public class CSVExporter {
    *
    * @param personID    ID of the person on whom the procedure was performed.
    * @param encounterID ID of the encounter where the procedure was performed
-   * @param payerID      ID of the payer who covered the immunization.
    * @param procedure   The procedure itself
    * @throws IOException if any IO error occurs
    */
@@ -906,7 +900,6 @@ public class CSVExporter {
    *
    * @param personID     ID of the person on whom the immunization was performed.
    * @param encounterID  ID of the encounter where the immunization was performed.
-   * @param payerID      ID of the payer who covered the immunization.
    * @param immunization The immunization itself
    * @throws IOException if any IO error occurs
    */
