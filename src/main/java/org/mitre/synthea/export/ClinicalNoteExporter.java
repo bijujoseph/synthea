@@ -25,9 +25,9 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ClinicalNoteExporter {
 
   private static final Configuration TEMPLATES = templateConfiguration();
-  private static String[] CUSTOM_TEMPLATE_NAMES = new String[] { "pe_positive"};
-//  private static String[] CUSTOM_TEMPLATE_NAMES = new String[] {"ct_angio_negative","ct_angio_positive",
-//          "hand_dvt_positive", "lab_dvt_positive", "pe_positive", "us_doppler_negative"};
+//  private static String[] CUSTOM_TEMPLATE_NAMES = new String[] { "pe_positive"};
+  private static String[] CUSTOM_TEMPLATE_NAMES = new String[] {"ct_angio_negative","ct_angio_positive",
+          "hand_dvt_positive", "lab_dvt_positive", "pe_positive", "us_doppler_negative"};
 
   private static Configuration templateConfiguration() {
 
