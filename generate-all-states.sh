@@ -9,10 +9,12 @@ array=('West Virginia' 'New Hampshire' 'New Jersey' 'District of Columbia' 'New 
 
 rm -rf $HOME/Downloads/synthea-output/
 
-./run_synthea -p 400 -a 0-112 --exporter.baseDirectory $HOME/Downloads/synthea-output/ --exporter.csv.append_mode false "Alaska"
+./run_synthea -p 1 -a 0-112 --exporter.baseDirectory $HOME/Downloads/synthea-output/ --exporter.csv.append_mode false "Alaska"
 
 for state in "${array[@]}"
 do
   echo $state
  	./run_synthea -p 400 -a 0-112 --exporter.baseDirectory $HOME/Downloads/synthea-output/ "$state"
 done
+
+./upload_samples.sh
